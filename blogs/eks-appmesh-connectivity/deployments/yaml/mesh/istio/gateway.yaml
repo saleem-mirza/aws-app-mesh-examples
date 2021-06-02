@@ -25,22 +25,6 @@ spec:
   http:
     - route:
         - destination:
-            host: yelb-appserver
-            subset: v1
-            port:
-              number: 4567
-          weight: 100
-        - destination:
-            host: yelb-appserver
-            subset: v2
-            port:
-              number: 4567
-          weight: 0
-      match:
-        - uri:
-            prefix: /api
-    - route:
-        - destination:
             host: yelb-ui
             port:
               number: 80
